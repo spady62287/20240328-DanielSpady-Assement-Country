@@ -1,13 +1,13 @@
 //
-//  BaseViewController.swift
+//  BaseTableViewController.swift
 //  20240328-DanielSpady-Assement-Country
 //
-//  Created by Daniel Spady on 2024-03-28.
+//  Created by Daniel Spady on 2024-03-31.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseTableViewController: UITableViewController {
     
     // View Models
     var viewModelList: [CountryViewModel]?
@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
     lazy var loadingView: UIView = { [unowned self] in
         let view = UIView(frame: self.view.bounds)
         view.backgroundColor = UIColor.black
-        view.alpha = 0
+        view.alpha = 1
         
         view.addSubview(self.loadingSpinner)
         self.loadingSpinner.backgroundColor = UIColor.clear
